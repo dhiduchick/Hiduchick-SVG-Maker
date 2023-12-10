@@ -18,7 +18,7 @@ The motivationg behind this application was to build a command line application 
 ## Installation
 
 1. Clone the repo
-   git clone https://github.com/dhiduchick/Hiduchick-README-Generator.git
+   git clone https://github.com/dhiduchick/Hiduchick-SVG-Maker.git
 
 2. Open in VS Code. If you do not have VS code you must install it.
 
