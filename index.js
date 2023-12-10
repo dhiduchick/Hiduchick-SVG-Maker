@@ -32,5 +32,16 @@ if (answers.shape === 'Triangle') {
     svgString += `<circle cx="150" cy="115" r="80" fill="${answers.shapeBackgroundColor}"/>`;
 }  
 
+ // <text> tag gives rise to text alignment, text-content/text-color taken in from user prompt and gives default font size of "40"
+ svgString += `<text x="150" y="130" text-anchor="middle" font-size="40" fill="${answers.textColor}">${answers.text}</text>`;
+ // Closing </g> tag
+ svgString += "</g>";
+ // Closing </svg> tag
+ svgString += "</svg>";
 
-}    
+ // Using file system module to generate svg file, takes in file name given in the promptUser function, the svg string, and a ternary operator which handles logging any errors, or a "Generated logo.svg" message to the console  
+ fs.writeFile(fileName, svgString, (err) => {
+   err ? console.log(err) : console.log("Generated logo.svg");
+ });
+}   
+
